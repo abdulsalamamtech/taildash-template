@@ -8,7 +8,7 @@
       <!-- Hamburger Toggle BTN -->
       <button
         class="z-99999 block rounded-sm border border-stroke bg-white p-1.5 shadow-sm dark:border-strokedark dark:bg-boxdark lg:hidden"
-        @click.stop="sidebarToggle = !sidebarToggle"
+        @@click.stop="sidebarToggle = !sidebarToggle"
       >
         <span class="relative block h-5.5 w-5.5 cursor-pointer">
           <span class="du-block absolute right-0 h-full w-full">
@@ -39,7 +39,7 @@
       </button>
       <!-- Hamburger Toggle BTN -->
       <a class="block flex-shrink-0 lg:hidden" href="index.html">
-        <img src="./images/logo/logo-icon.svg" alt="Logo" />
+        <img src="{{ asset('/images/logo/logo-icon.svg') }}" alt="Logo" />
       </a>
     </div>
     <div class="hidden sm:block">
@@ -89,7 +89,7 @@
             <input
               type="checkbox"
               :value="darkMode"
-              @change="darkMode = !darkMode"
+              @@change="darkMode = !darkMode"
               class="absolute top-0 z-50 m-0 h-full w-full cursor-pointer opacity-0"
             />
             <span
